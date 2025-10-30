@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwkjmn6s7ko3w"]
+
+[ext_resource type="Script" uid="uid://dtqv72nrjh8wq" path="res://menu.gd" id="1_5yleq"]
+[ext_resource type="Texture2D" uid="uid://csvfvlhpfpsk4" path="res://Assets/cooltext492679280623714.png" id="2_ylpcl"]
+[ext_resource type="Texture2D" uid="uid://b2ddwpjwygqr1" path="res://Assets/krita.png" id="3_ylpcl"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_5yleq")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -158.5
+offset_right = 158.5
+offset_bottom = 85.0
+grow_horizontal = 2
+texture = ExtResource("2_ylpcl")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -15.5
+offset_right = 30.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Nivel 2"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.383
+anchor_right = 0.499
+anchor_bottom = 0.383
+offset_left = -69.848
+offset_top = -31.184
+offset_right = 69.152
+offset_bottom = 31.816
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Nivel 1"
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 372.0
+offset_top = 393.0
+offset_right = 772.0
+offset_bottom = 593.0
+texture = ExtResource("3_ylpcl")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b727s300hj5m1"]
+
+[ext_resource type="Texture2D" uid="uid://d18x1yhcgynyd" path="res://Assets/End (Idle).png" id="1_158bs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_158bs")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(23, -13.9, -17, -16.1, -17, -14.3, -27, -9.2, -27, 6.2, -11.5, 14, -8.7, 14, -8.3, 16, -11.7, 16, -21, 23, -21, 32, 21, 32, 21, 22.9, 13, 17.8, 13, 16, 8.3, 16, 8.9, 13.2, 14.3, 11, 22, 11, 25, 7, 27, 7, 27, -9, 23, -12)
