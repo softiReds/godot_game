@@ -7,5 +7,5 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
 		SingleGameManager.add_puntos()
-		coin_sound.playing = true
+ 		coin_sound.playing = true
 		queue_free()
