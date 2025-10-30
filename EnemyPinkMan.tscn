@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://p1x7x47xfery"]
+[gd_scene load_steps=16 format=3 uid="uid://p1x7x47xfery"]
 
 [ext_resource type="Texture2D" uid="uid://tplhikasmcl4" path="res://Pink Man/Run (32x32).png" id="1_ke6ue"]
 
@@ -94,10 +94,18 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ke6ue"]
+size = Vector2(18, 20)
+
 [node name="CharacterBody2D3" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vpj3y")
 animation = &"Run"
-frame_progress = 0.689312
+frame = 8
+frame_progress = 0.333775
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ke6ue")

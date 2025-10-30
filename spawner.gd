@@ -3,10 +3,10 @@ extends Node2D
 var timer
 
 func _ready():
-	#timer = get_node("Timer")
-	#timer.stop
-	#timer.wait_time = randf_range(3,5)
-	#timer.start()
+	timer = get_node("Timer")
+	timer.stop
+	timer.wait_time = randf_range(3,5)
+	timer.start()
 	pass
 
 func spawn():
