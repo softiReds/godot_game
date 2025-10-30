@@ -7,13 +7,16 @@ const JUMP_VELOCITY = -400.0
 @onready var timer = $Timer
 @onready var cam = $Camera2D2
 @onready var timer_2: Timer = $Timer2
-@onready var jump_label: Label = %JumpLabel
+@onready var jump_label
 
 var accum = 0
 var itera = 0
 var conta = 0
 var maxim = 160
 var steps = 40
+
+func _ready():
+	jump_label = get_node("/root/Ui/Sprite2D2/JumpLabel")
 
 func CameraMove():
 	itera = 0
