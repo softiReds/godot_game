@@ -299,6 +299,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("16_vln5d")]
+position = Vector2(286, 612)
 
 [connection signal="timeout" from="CharacterBody2D/Timer2" to="CharacterBody2D" method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
