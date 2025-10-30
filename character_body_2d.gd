@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -400.0
 @onready var timer = $Timer
 @onready var cam = $Camera2D2
 @onready var timer_2: Timer = $Timer2
-@onready var jump_label
+@onready var jump_label 
 
 var accum = 0
 var itera = 0

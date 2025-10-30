@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh4sveuco2f77"]
+[gd_scene load_steps=17 format=3 uid="uid://bh4sveuco2f77"]
 
 [ext_resource type="Texture2D" uid="uid://ciesw7tc4sdqq" path="res://Assets/Green.png" id="1_unbbg"]
 [ext_resource type="Texture2D" uid="uid://b8t46bs830jt6" path="res://Assets/Terrain (16x16).png" id="2_ybxvu"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://c7tuv4823u57o" path="res://trophy.gd" id="10_ybxvu"]
 [ext_resource type="PackedScene" uid="uid://b073ggklm0r1v" path="res://nivel2.tscn" id="11_cj372"]
 [ext_resource type="PackedScene" uid="uid://y2cgmyq1hwju" path="res://ui.tscn" id="12_wdt0d"]
+[ext_resource type="AudioStream" uid="uid://64utae8sntux" path="res://Audio/434016__abczezeze__yinglaek.mp3" id="13_1gjy8"]
+[ext_resource type="AudioStream" uid="uid://cq7maqbaxhwxb" path="res://Audio/682094__henkonen__bite-1.wav" id="14_fjc60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("2_ybxvu")
@@ -279,6 +281,13 @@ script = ExtResource("10_ybxvu")
 targetLevel = ExtResource("11_cj372")
 
 [node name="UI" parent="." instance=ExtResource("12_wdt0d")]
+
+[node name="GameAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_1gjy8")
+autoplay = true
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_fjc60")
 
 [connection signal="timeout" from="CharacterBody2D/Timer2" to="CharacterBody2D" method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
