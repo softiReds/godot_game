@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bh4sveuco2f77"]
+[gd_scene load_steps=20 format=3 uid="uid://bh4sveuco2f77"]
 
 [ext_resource type="Texture2D" uid="uid://ciesw7tc4sdqq" path="res://Assets/Green.png" id="1_unbbg"]
 [ext_resource type="Texture2D" uid="uid://b8t46bs830jt6" path="res://Assets/Terrain (16x16).png" id="2_ybxvu"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cq7maqbaxhwxb" path="res://Audio/682094__henkonen__bite-1.wav" id="14_fjc60"]
 [ext_resource type="Script" uid="uid://dbjejns0yjxng" path="res://spawner.gd" id="15_fjc60"]
 [ext_resource type="PackedScene" uid="uid://p1x7x47xfery" path="res://EnemyPinkMan.tscn" id="16_vln5d"]
+[ext_resource type="PackedScene" uid="uid://c27hmgrprt8i3" path="res://character_body_2d_4.tscn" id="17_8d76f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("2_ybxvu")
@@ -300,6 +301,8 @@ autostart = true
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("16_vln5d")]
 position = Vector2(286, 612)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("17_8d76f")]
 
 [connection signal="timeout" from="CharacterBody2D/Timer2" to="CharacterBody2D" method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
